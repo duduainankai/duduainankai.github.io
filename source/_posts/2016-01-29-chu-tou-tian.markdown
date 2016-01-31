@@ -3,7 +3,7 @@ layout: post
 title: "出头天"
 date: 2016-01-29 10:21:43 +0800
 comments: true
-categories: 
+categories: 出头天
 ---
 在我的天顶 甘有人会看见
 看到我不甘愿这样过一生

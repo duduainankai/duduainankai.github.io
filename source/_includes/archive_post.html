@@ -1,11 +1,11 @@
 {% capture date %}{{ post.date }}{% endcapture %}
-{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
-{% unless year == this_year %}
-	{% assign year = this_year %}
+{% capture this_year_month %}{{ date | date: "%Y/%m" }}{% endcapture %}
+{% unless yearm == this_year_month %}
+	{% assign yearm = this_year_month %}
 	{% unless forloop.first %}
 		</section>
 	{% endunless %}
-	<section class="archives"><h1 class="year">{{ date | date: "%Y" }}</h1>
+	<section class="archives"><h1 class="year">{{ date | date: "%Y/%m" }}</h1>
 {% endunless %}
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="meta">

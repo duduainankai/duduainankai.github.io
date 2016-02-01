@@ -1,13 +1,22 @@
 ---
 layout: page
-title: "Categories"
+title: "标签"
 date: 2013-07-28 23:11
-comments: true
+comments: false
 sharing: false
-footer: true
+footer: false
 ---
-<ul>
-{% for item in site.categories %}
-    <li><a href="/blog/categories/{{ item[0] }}/">{{ item[0] | capitalize }}</a> [ {{ item[1].size }} ]</li>
-{% endfor %}
-</ul>
+<section>
+	<ul id="categories">
+	{% for item in site.categories %}
+	    <li><a href="/blog/categories/{{ item[0] }}/">{{ item[0] | capitalize }}</a> [ {{ item[1].size }} ]</li>
+	{% endfor %}
+	</ul>
+</section>
+<!--
+<section>
+  <ul id="categories">
+    {% category_list %}
+  </ul>
+</section>
+-->

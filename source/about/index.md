@@ -31,4 +31,8 @@ Hello World.
 * 邮件: <nkdudu@126.com>
 * 博客: <http://duduainankai.github.io>
 * GitHub: <https://github.com/duduainankai>
+* 微信： lv381853802
+* 邮件: <nkdudu@126.com>
+* 博客: <http://duduainankai.github.io>
+* GitHub: <https://github.com/duduainankai>
 

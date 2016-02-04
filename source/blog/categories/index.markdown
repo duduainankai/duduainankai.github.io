@@ -6,6 +6,7 @@ comments: false
 sharing: false
 footer: false
 ---
+<!--
 <section>
 	<ul id="categories">
 	{% for item in site.categories %}
@@ -13,10 +14,10 @@ footer: false
 	{% endfor %}
 	</ul>
 </section>
-<!--
+-->
+
 <section>
   <ul id="categories">
     {% category_list %}
   </ul>
 </section>
--->

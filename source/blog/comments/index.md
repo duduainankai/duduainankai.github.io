@@ -8,6 +8,7 @@ footer: false
 ---
 
 <section>
+    <!--
     <ul class="ds-recent-comments"
         data-num-items="{{ site.duoshuo_asides_num }}"
         data-show-avatars="{{ site.duoshuo_asides_avatars }}"
@@ -15,9 +16,18 @@ footer: false
         data-show-title="{{ site.duoshuo_asides_title }}"
         data-show-admin="{{ site.duoshuo_asides_admin }}"
         data-excerpt-length="{{ site.duoshuo_asides_length }}"></ul>
+    -->
+    <ul class="ds-recent-comments"
+        data-num-items="60"
+        data-show-avatars="1"
+        data-show-time="1"
+        data-show-title="1"
+        data-show-admin="0"
+        data-excerpt-length="45"></ul>
     <!--多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
-        var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
+        //var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
+        var duoshuoQuery = {short_name:"duduainankai"};
         (function() {
             var ds = document.createElement('script');
             ds.type = 'text/javascript';ds.async = true;

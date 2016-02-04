@@ -12,14 +12,14 @@
      -webkit-transform: translateZ(0);
  }
 }
-
+/*
 #categories li {
     float:left;
     padding-right:60px;
     padding-top:25px;
     list-style-type:none;
 }
-
+*/
 .pager {
   padding-left: 0;
   margin: 20px 0;

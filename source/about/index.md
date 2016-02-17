@@ -15,6 +15,7 @@ Hello World.
 * Email: <nkdudu@126.com>
 * Blog: <http://lizheming.top>
 * GitHub: <https://github.com/duduainankai>
+* zhihu: <https://www.zhihu.com/people/du-du-76-75>
 
 <br />
 
@@ -43,4 +44,5 @@ Come On You Gunners!
 * 邮件: <nkdudu@126.com>
 * 博客: <http://lizheming.top>
 * GitHub: <https://github.com/duduainankai>
+* 知乎: <https://www.zhihu.com/people/du-du-76-75>
 

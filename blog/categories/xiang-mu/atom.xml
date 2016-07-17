@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[出头天]]></title>
-  <link href="http://duduainankai.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[分类：项目 | 出头天]]></title>
+  <link href="http://duduainankai.github.io/blog/categories/xiang-mu/atom.xml" rel="self"/>
   <link href="http://duduainankai.github.io/"/>
   <updated>2016-07-17T16:09:24+08:00</updated>
   <id>http://duduainankai.github.io/</id>
@@ -54,39 +54,27 @@
 
 <p>  requests也提供了很方便的管理cookie的方式。</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-</span><span class="line">
-</span><span class="line"><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="s">&quot;email&quot;</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;remember_me&quot;</span><span class="p">:</span> <span class="s">&quot;true&quot;</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;_xsrf&quot;</span><span class="p">:</span> <span class="n">_xsrf</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;captcha&quot;</span><span class="p">:</span> <span class="n">captcha</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&quot;https://www.zhihu.com/login/email&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>``` python
+	session = requests.Session()</p>
+
+<pre><code>data = {
+    "email": email,
+    "password": password,
+    "remember_me": "true",
+    "_xsrf": _xsrf,
+    "captcha": captcha
+}
+
+session.post(url="https://www.zhihu.com/login/email", data=data) ```
+</code></pre>
 
 <p>  就这么简单cookie就被保存在session中了，接下来所有的请求只要通过session来处理就可以咯。</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="c"># 可以查看cookie有哪些</span>
-</span><span class="line"><span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">cookies</span><span class="p">:</span>
-</span><span class="line">	<span class="k">print</span> <span class="n">cookie</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p><code>python
+	# 可以查看cookie有哪些
+	for cookie in session.cookies:
+		print cookie
+</code></p>
 
 <h4 id="html">获取html源码中的内容</h4>
 
@@ -125,52 +113,6 @@
 <p>  现在的功能还比较基本，主要是我一般也就看看不太爱答题或者评论，不过以后应该会接着扩展的，包括导出答案备份、增加评论等等的功能，反正会一直维护下去的吧，因为这算是我目前为止自己最喜欢的一个项目了。</p>
 
 <p>  加油。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[出头天]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian/"/>
-    <updated>2016-01-27T12:23:05+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian</id>
-    <content type="html"><![CDATA[<audio controls=""><source src="http://7xqncq.com1.z0.glb.clouddn.com/%E4%BA%94%E6%9C%88%E5%A4%A9%20-%20%E5%87%BA%E5%A4%B4%E5%A4%A9.mp3" /></audio>
-
-<pre><code>"
-你要一直努力  
-努力走到出头天的
-那一天
-"
-</code></pre>
-
-<!--more-->
-
-<pre><code>在我的天顶 甘有人会看见 
-看到我不甘愿这样过一生 
-
-在我的一生 我甘愿来相信 
-每一朵花都有自己的春天 
-在我的天顶 大雨落不停 
-也不能改变到我的固执 耶 
-
-永远等待那一日 咱可以出头天 
-人生不怕风浪 只怕自己没志气 
-那一日 咱可以出头天 
-我盼望的日子 会真快 来到我身边 
-
-在我的天顶 甘有人在保佑 
-怎样我常常摔的头壳流血 
-
-血乾会结痂 失败也不失志 
-成功是咱自己看自己得起 
-飘浪的日子 等待着时机 
-我不信命运会这麽无情 耶 
-
-永远等待那一日 咱可以出头天 
-人生不怕风浪 只怕自己没志气 
-那一日 咱可以出头天 
-我盼望的日子 会真快 来到我身边 
-</code></pre>
-
 ]]></content>
   </entry>
   

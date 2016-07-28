@@ -15,7 +15,7 @@ Hello World.
 * Email: <nkdudu@126.com>
 * Blog: <http://lizheming.top>
 * GitHub: <https://github.com/duduainankai>
-* zhihu: <https://www.zhihu.com/people/du-du-76-75>
+* zhihu: 杜杜<https://www.zhihu.com/people/du-du-76-75>
 
 <br />
 
@@ -25,8 +25,9 @@ Hello World.
 # 关于我 
 
 <br />
+我是黎哲明，南开本科，交大硕士在读。
 
-南开本科，交大硕士在读，会写一点代码，但是很菜，希望能变的很厉害。
+会写一点代码，但是很菜，希望能变的很厉害。
 
 阿森纳球迷，喜欢足球篮球台球，嗯 还有编程。
 

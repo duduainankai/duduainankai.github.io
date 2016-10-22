@@ -77,6 +77,8 @@ github_skip_forks: true
 twitter_user:
 twitter_tweet_button: false
 
+linkedin_user: https://www.linkedin.com/in/zheming-li-1a8282aa
+
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium

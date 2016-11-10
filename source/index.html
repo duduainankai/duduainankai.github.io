@@ -1,20 +1,62 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Zheming Li</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="stylesheets/main.css" />
+	</head>
+	<body class="is-loading">
 
-{% assign index = true %}
-<div itemscope itemtype="http://schema.org/Blog">
-{% for post in paginator.posts %}
-{% assign content = post.content %}
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">{% include article.html %}</article>
-{% endfor %}
-</div>
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{paginator.previous_page}}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{paginator.next_page}}" class="next">Next</a>
-    {% endif %}
-    <div class="center"><a href="{{ root_url }}/blog/archives">Blog Archives</a></div>
-</nav>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="favicon1.png" alt="" style="height:122px"/></span>
+							<h1>黎哲明</h1>
+							<!--<p>南开，交大，Java，Python，阿森纳</p>-->
+							<p>你好，要交个朋友吗</p>
+						</header>
+						
+						<p><a href="blog/index.html" target="_blank">Blog</a></p>
+
+						<footer>
+							<ul class="icons">
+								<li><a href="https://github.com/duduainankai" class="fa-github-square" target="_blank" alt="GitHub">GitHub</a></li>
+								<li><a href="https://www.linkedin.com/in/zheming-li-1a8282aa" class="fa-linkedin" target="_blank" alt="linkedin">LinkedIn</a></li>
+					      <!--<li><a href="blog/index.html" class="fa-star-o"
+						 target="_blank" alt="Resume">Resume</a></li>-->
+								<li><a href="mailto:nkdudu@126.com" class="fa fa-envelope" target="_blank" alt="Email">Email</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<!--<li>&copy; dudu</li>-->
+							<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
+

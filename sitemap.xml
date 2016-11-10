@@ -20,7 +20,7 @@
 <loc>http://duduainankai.github.io/blog/archives/</loc>
 </url>
 <url>
-<loc>http://duduainankai.github.io/</loc>
+<loc>http://duduainankai.github.io/blog/</loc>
 </url>
 <url>
 <loc>http://duduainankai.github.io/blog/categories/</loc>
@@ -52,5 +52,9 @@
 <url>
 <loc>http://duduainankai.github.io/blog/pencil/index.html</loc>
 <lastmod>2016-11-07T11:29:53+08:00</lastmod>
+</url>
+<url>
+<loc>http://duduainankai.github.io/index.html</loc>
+<lastmod>2016-11-10T22:59:03+08:00</lastmod>
 </url>
 </urlset>

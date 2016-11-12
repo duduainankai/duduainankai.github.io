@@ -1,128 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[出头天]]></title>
-  <link href="http://duduainankai.github.io/atom.xml" rel="self"/>
-  <link href="http://duduainankai.github.io/"/>
-  <updated>2016-11-12T23:10:21+08:00</updated>
-  <id>http://duduainankai.github.io/</id>
-  <author>
-    <name><![CDATA[杜杜]]></name>
-    <email><![CDATA[nkdudu@126.com]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE HTML>
 
+<html>
+
+<head>
+	<meta name="baidu-site-verification" content="ZEp3c5fEVj" />
+	
+	<meta charset="utf-8">
+	<title>阿里云OSS初体验 - 出头天</title>
+	<meta name="author" content="杜杜">
+
+	
+	<meta name="description" content="阿里云OSS初体验   终于开始放暑假了，这一个学期一边要带着几个学弟一起做实验室项目还要一边上CSDI这种神课真的是身心具疲。不过确实也收获了很多原来不曾有过的体验，也算有所成长了吧。现在放假了也可以有时间来总结总结这个项目里的内容了。    &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="出头天" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan/">
+	<link href="/favicon1.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+	<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 百度站长认证 -->
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- 站外链接在新标签页中打开 -->
+<script type="text/javascript">
+ function addBlankTargetForLinks () {
+   $('a[href^="http"]').each(function(){
+       $(this).attr('target', '_blank');
+   });
+ }
+ 
+ $(document).bind('DOMNodeInserted', function(event) {
+  addBlankTargetForLinks();
+ });
+</script>
   
-  <entry>
-    <title type="html"><![CDATA[铅笔画和图片墙]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/"/>
-    <updated>2016-10-23T10:03:05+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang</id>
-    <content type="html"><![CDATA[<p>  有一天在逛知乎的时候看到了有人推荐了一篇论文: <a href="http://www.cse.cuhk.edu.hk/leojia/projects/pencilsketch/pencil_drawing.htm">Combining Sketch and Tone for Pencil Drawing Production</a>。讲的是一个关于铅笔画算法的实现，看作者贴了一些效果图觉得相当有趣，看着就想着试试看有没可能自己也实现一下。</p>
 
-<p>  刚好中秋前刚从医院回来，国庆也不打算出门了，就用这两个假期看看论文研究一下，然后照着开源的matlab代码用python重新实现了一遍(其实就是翻译了一下。。)。最后在网上找了一个开源的图片墙页面，把处理的结果贴一下，也算是从头到尾做完一整套了吧。</p>
+</head>
 
-<p>  依旧还是先上GitHub：<a href="https://github.com/duduainankai/pencil-python">python版铅笔画</a>。然后是<a href="http://lizheming.top/blog/pencil">图片墙</a>。<!--more--></p>
 
-<h3 id="section">铅笔画算法</h3>
-
-<p>  论文几位作者都来自香港中文大学，12年npar的best paper，还是挺厉害的了。论文的工作就是给定一张正常的比如相机的图片，然后通过一定的处理可以得到同一张图片用✏️画出来的效果，挺有意思的对吧。但是因为原先基本没有接触过图像处理的东西，所以论文看起来还是挺费劲的。</p>
-
-<p>  简单来说算法可以分成两大步: 生成笔画结构和色调渲染，最后的处理结果就是这两步的结合，如下图所示(图片来源于论文)。</p>
-
-<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/2.png" alt="" /></p>
-
-<h4 id="section-1">生成笔画结构</h4>
-
-<p>  生成笔画结构的过程其实就是把图片的轮廓给画出来，就像用铅笔把一个人的身体给描绘出来一样，需要得到物体的边缘线。</p>
-
-<p>  其实这一步是可以有非常简单的做法的，将图片转换成灰度图片以后，我们只需要计算相邻两个像素点值，也就是做一个差分的结果就是轮廓图了(大二学的数字信号处理留给我的唯一印象。。)。因为在灰度值的区间是[0,255]，也就是说如果两个相邻像素点属于同一块区域那么他们的差值会很小，反应在图片上就是一个很暗的点，而如果是一个明显的分界线那么差值比较大就是一个比较亮的点。</p>
-
-<p>  这么做虽然简单，但最大的缺点就是容易受到噪声的干扰，并且只有对于明显的分界线有比较好的效果，对于细节的纹理就没法处理了。论文针对这个内容提出了改进的方法，分为以下两个步骤: classification和line shaping。</p>
-
-<p><strong>classification</strong></p>
-
-<p>  目的是将每一个像素点分类到一个方向上。</p>
-
-<p>  在x和y方向上计算差分或者叫梯度，然后求和的平方根作为这个像素点的梯度值。得到梯度以后，将圆周分成八个方向的方法，分别用一个方向向量来表示。同时将这个方向向量作为卷积核，图像的灰度矩阵分别与这八个卷积核做卷积，每个像素点在八个方向上卷积结果最大的就是这个像素点的方向。</p>
-
-<p>  最后处理得到的结果是一个map set，一个前二维与图片大小相同，第三维是方向数的矩阵，表示每一个方向上所属的像素点的梯度值。对于一个像素点而言就是它只在它所属的方向上有值，其余方向上都是0。</p>
-
-<p><strong>line shaping</strong></p>
-
-<p>  这一步就是画线的过程，用上一步得到的map set再次和八个方向向量做卷积，这一步会把同一个方向上的像素点连接起来，这样就能够很有效的避免孤立点的存在，细节的纹理能够有很好的体现。</p>
-
-<p>  以上两步完成之后就得到了第一个输出结果S，完成一半的工作啦，来看看处理的效果吧，点击可以看大图。</p>
-
-<div align="center" style="margin-top:20px">	
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58.jpg" style="height:230px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58_s.jpg" style="height:230px" />
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<!--
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nkdudu@126.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	-->
+	<img src="/images/profile.jpg" alt="Profile Picture" style="width: 160px;" />
 </div>
-
-<div align="center">	
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui.jpg" style="height:205px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui_s.jpg" style="height:205px" />
-</div>
-
-<h4 id="section-2">色调渲染</h4>
-
-<p>  铅笔画在完成了图片的笔画结构后，一般来说作者还会通过在不同的地方重复描笔的次数来控制颜色的深浅来描述不同的物体或者是阴影。因此这第二步的工作就是在模拟这个步骤从而给图片上色。这一步也是分成两小步来完成的。</p>
-
-<p><strong>直方图匹配</strong></p>
-
-<p>  作者提出一副铅笔画图像的直方图是有一定pattern的，因为只是由黑色的铅笔和白色的纸张构成的。因此可以简单的分成三种区域：bright、mild和dark，同时可以用三种分布来模拟这三个区域：拉普拉斯分布、均匀分布和高斯分布，而一张铅笔画图像的最终直方图分布是这三种分布的加权和。这些权值和分布的控制参数作者直接给出了得到的结果实现的时候也就直接用了，没有给出具体的过程(不过就算有我应该也看不懂。。)。然后将这个直方图和一个正常图片的直方图进行匹配，匹配就是假设在图片中有一个m、n位置的像素点值为200，而在这个图片模拟出的直方图中像素200的点对应y值为100，正常图片直方图中y值最接近100的像素点值是220，那么就将m、n位置上的像素点修正为220的过程。这一步返回的结果就是修正后的图片灰度矩阵。</p>
-
-<p><strong>纹理渲染</strong></p>
-
-<p>  这一步在计算每个像素点需要被重复描绘的次数，然后利用一个先前准备好的用于描绘的texture模板图片进行描笔。利用上一步得到的修正的图片灰度矩阵和模板图片的灰度矩阵，以及一个我看不懂的公式就可以算出需要重复的次数beta啦，然后就能愉快的得到结果T了。</p>
-
-<p>  也来看看这一步获得的T的效果吧。</p>
-
-<div align="center" style="margin-top:20px">	
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58.jpg" style="height:230px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58_t.jpg" style="height:230px" />
-</div>
-
-<div align="center">	
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui.jpg" style="height:205px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui_t.jpg" style="height:205px" />
-</div>
-
-<h4 id="section-3">最后的结果</h4>
-
-<p>  最后把两步的结果S和T相乘就能得到一个完成的结果啦，两个操作相互complete的。</p>
-
-<div align="center" style="margin-top:20px">
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58_pencil.jpg" style="height:205px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui_pencil.jpg" style="height:205px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/58_color.jpg" style="height:205px" />
-	<img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/sjtu_xuhui_color.jpg" style="height:205px" />
-</div>
-
-<p>  然后我Google了一个简单的图片墙页面，想看更多的图片处理结果可以点<a href="http://lizheming.top/blog/pencil">这里</a>啦，不过图片太多加载可能会有点慢。</p>
-
-<h4 id="section-4">总结</h4>
-
-<p>  写这个项目就是觉得挺有趣的，花的时间其实也不短，然后写完了也去知乎上答了个问题:<a href="https://www.zhihu.com/question/21395276">可以用 Python 编程语言做哪些神奇好玩的事情</a>，然而放了两张江学长的铅笔画像就被建议修改了。。问题是我修改完了居然也不给恢复正常是要怎样。</p>
-
-<p>  收获也不算少吧，好歹开始入门numpy、scipy这一系列的科学计算库了，也许哪天有时间能好好学学机器学习的时候用得到呢。</p>
-
-<p>  还有一个就是写获得彩色铅笔画的时候，需要从Ycbcr这个颜色通道转换会RGB这个通道，matlab是自带了这个函数的，但是python没有啊。一路google、stackoverflow下来找到的转换方式都不对，但用同样的输出在matlab里转换一下却是对的。我只好用matlab打着断点一步一步的看处理过程，想着要不自己造个轮子好了。可是最后发现matlab调的是一个C函数的实现，然后又接着一路谷歌爆栈网的搜python怎么调C代码，简单了解了下<a href="https://docs.python.org/2.7/library/ctypes.html">ctypes</a>，发现找不到需要的C函数的so文件。更崩溃的是发现这个C的实现里面又调用了matlab的函数，好吧这条路算是走到头了。。最后无奈的又开始探索opencv了。因为最先开始写的时候我看到的帖子里说安装opencv是个非常麻烦的过程，列出了好多步骤看的我头大因此我原来都想着不要用opencv来。但最后走投无路了我就想说用homebrew装一个试下好了，奇迹的是居然还真能有用，看到最后成功的时候真的是在宿舍大叫了一声，还好舍友不在。。</p>
-
-<p>  看论文确实费脑子啊，虽然最后实现出来了但也还是不少看不懂的地方。。想到这学期就得开题了也只能硬着头皮看了，希望最后能有个好结果吧，加油了！COYG！</p>
-
-<p>  最后的最后，祝自己生日快乐吧。</p>
-
-<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/pencildraw/71_color.jpg" alt="" /></p>
-]]></content>
-  </entry>
+<hgroup>
+  <h1><a href="/">出头天</a></h1>
   
-  <entry>
-    <title type="html"><![CDATA[阿里云OSS初体验]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan/"/>
-    <updated>2016-08-03T15:27:32+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan</id>
-    <content type="html"><![CDATA[<p>  终于开始放暑假了，这一个学期一边要带着几个学弟一起做实验室项目还要一边上CSDI这种神课真的是身心具疲。不过确实也收获了很多原来不曾有过的体验，也算有所成长了吧。现在放假了也可以有时间来总结总结这个项目里的内容了。</p>
+    <h2>陪你走到 出头天的那一天</h2>
+  
+</hgroup>
+<nav id="main-nav"><ul class="main">
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/blog/categories">标签云</a></li>
+    <li><a href="/blog/archives">文章列表</a></li>
+    <li><a href="/blog/comments">最新评论</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:nkdudu@126.com" title="Email">Email</a>
+		
+		
+		
+		
+		
+			<a class="github" href="https://github.com/duduainankai" title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<!--<a class="linkedin" href="http://www.linkedin.com/in/https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn">LinkedIn</a>-->
+			<a class="linkedin" href="https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn" target="_blank">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+
+	</div>
+</nav>
+</header>				
+			</div>
+			<div class="zhihu-card" data-userhash="du-du-76-75" data-width="200" data-height="300" data-key1="answer" data-key2="agree" data-key3="follower" data-theme="github"></div>
+			<script src="//cdn.jsdelivr.net/zhihu-card/latest/widget.js"></script>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">阿里云OSS初体验</h1>
+	<div class="entry-content" itemprop="articleBody"><p>  终于开始放暑假了，这一个学期一边要带着几个学弟一起做实验室项目还要一边上CSDI这种神课真的是身心具疲。不过确实也收获了很多原来不曾有过的体验，也算有所成长了吧。现在放假了也可以有时间来总结总结这个项目里的内容了。</p>
 
 <p>  先记录其中一个最感兴趣也比较新鲜的阿里云对象存储OSS的使用吧。<!--more--></p>
 
@@ -429,197 +455,80 @@
 <p>  其实不止是阿里云，越来越多的云厂商包括腾讯云、七牛云等等都提供了相应的对象存储服务。而越来越多的云服务比如云主机、云数据库等等也越来越方便了开发者，好比利用了OSS省去了自建存储系统的过程，同时自带三备份、与CDN相结合提高访问速率，让开发者可以专注业务逻辑的实现，这确实是造福广大开发者的好事。</p>
 
 <p>  我也相信越来越多的服务都会往云上迁移，越来越多的开发者也会更多的了解到这些云产品的使用甚至是开发。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[最佳损友]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/07/21/zui-jia-sun-you/"/>
-    <updated>2016-07-21T12:03:05+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/07/21/zui-jia-sun-you</id>
-    <content type="html"><![CDATA[<audio controls=""><source src="http://7xqncq.com1.z0.glb.clouddn.com/music/zuijiasunyou.mp3" /></audio>
+</div>
+	<ul class="pager" style="padding-bottom:10px;">
+        
+            <li style="float: left;">
+                <a href="/blog/2016/07/21/zui-jia-sun-you/">« 上一篇: 最佳损友</a>
+            </li>
+        
+        
+            <li style="float: right;">
+                <a href="/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/">» 下一篇: 铅笔画和图片墙</a>
+            </li>
+        
+    </ul>
 
-<p>  <strong>朋友 我当你一秒朋友  朋友 我当你一世朋友</strong></p>
+</article>
 
-<p>  <strong>奇怪 过去再不堪回首  怀缅 时时其实还有</strong><!--more--></p>
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2016/08/03/a-li-yun-osschu-ti-yan" data-title="阿里云OSS初体验" data-url="http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"duduainankai"};
+    (function() {
 
-<p><br />
-  最佳损友，收录于陈奕迅2006年6月15日发行的”Life continues”，作词黄伟文，作曲eric kwok。</p>
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+  </section>
+</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2016
 
-<p>  陈奕迅与千嬅是老友，eric kwok与千嬅同年同日生，黄伟文写下这首歌的时候就已经准备好了这一切，而这时候曾是亲密好友的他和千嬅已经形同陌路了。相传eric kwok做完这首歌就和千嬅说一定要仔细听，而她在出游时听到这首歌后停车抱头痛哭一场。</p>
+    杜杜
 
-<p>  想来也奇怪，人在生命的每一个阶段都会遇到各种形形色色的人，可结果甚至能成为点赞之交的都并不多见。就像哪怕现在回忆起本科时候的生活，总有那么多在毕业之后再也不会有联系，而想遇见能交心的就更难能可贵了。</p>
 
-<p>  所以一段深刻的友情总是显得那么弥足珍贵，珍贵到当你们陌路后甚至害怕去想起。就像并不是每个旧知己在最后，都会变成老友。也许是因为时过境迁，也许是因为矛盾误解，当年一起开心过奋斗过的日子在时间面前都变的那么不堪一击。没有你的电话，也没有你的微信，翻遍所有联系方式也只敢在QQ上给你说一声迟来的生日快乐最后也不出意外的石沉大海。只敢偶尔装作不经意的向别人打听现状，希望你能过的好，希望你能记得过去的时光。</p>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d733557f5d61a3e85dc9c1f719fe00a1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-<p>  大概是不会找到这里的吧，那就祝你生日快乐吧，我的老友。</p>
 
-<p><br />
-  <strong>多想一天 彼此都不追究 相邀再次喝酒  待葡萄成熟透</strong></p>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257404397'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257404397%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 
-<p><br />
-  在2012年Concert YY黄伟文作品展的最后一晚，杨千嬅挺着大肚穿着平底鞋连唱三首可惜我是水瓶座、勇、野孩子。三曲唱毕的时候黄伟文带着千fa最喜欢的紫色的花推着婴儿车登台，拥抱，一旁的陈奕迅唱出了这首«最佳损友»。</p>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257417654'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257417654' type='text/javascript'%3E%3C/script%3E"));</script>
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+		</div>
+	</div>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-<p>  其实也许，如果那时候我能不那么中二，一切都会不一样的吧。当然，也只是如果罢了。</p>
 
-<p>  希望我们也还能有，见面喝一杯的机会。祝福你，我的老友。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[终端版知乎客户端]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan/"/>
-    <updated>2016-07-17T10:03:05+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan</id>
-    <content type="html"><![CDATA[<p>  搭完博客也过去大半年都有了却什么都还没写过，虽然不能用太忙来做借口(其实就是懒)，不过过去的一个学期确实感觉有够忙的。</p>
 
-<p>  但是好歹也学了点东西，特别是开始写python了感觉真的很爽，于是就有了这个用爬虫做的终端版的知乎客户端。可以用命令行来刷知乎，用命令来点赞，感觉还挺有意思的。</p>
 
-<p>  直接上Github咯：<a href="https://github.com/duduainankai/zhihu-terminal">终端版知乎客户端</a><!--more--></p>
 
-<h3 id="section">准备</h3>
 
-<p>  记得很早之前有天在刷知乎的时候TL里出现了一个很有趣的问题：<a href="https://www.zhihu.com/question/27621722">能利用爬虫技术做到哪些很酷很有趣很有用的事情？</a>，看着各种高票回答感觉自己也心动了，也想做些有意思的事情。而且一直也想好好的学一下python，以前虽然看过一遍教程跟过公开课不过就算都拿了证书也只是在各种print，没做过什么有用的东西很快也就都忘了。</p>
-
-<p>  于是就先找了一遍知乎上关于python入门的回答，大致看了一遍learn python the hard way，感觉基本语法差不多了也就开始重点找爬虫的资料了，感觉一边写一边学效果会更好。</p>
-
-<h3 id="section-1">爬虫</h3>
-
-<p><strong>我所认为的爬虫可以概括为任何用代码、机器模拟人为浏览器访问网站及其操作的过程。</strong></p>
-
-<p>  知乎上有许多关于爬虫入门的回答，想来也挺有趣的：我在知乎上学爬虫然后来爬知乎。首先当然是要有一些计算机网络的知识了，至少了解到什么是get方法、什么是post方法，两者之间的区别这样；然后就可以动手开始写啦。一开始也是用urllib和urllib2写过一两个小爬虫的，但是自从后来一接触到了<a href="https://github.com/kennethreitz/requests">requests</a>之后就被折服了，因为实在太方便了，有人评价说是一键安装的效果，感觉很到位。</p>
-
-<p>  然后就可以开始着手爬一些东西了，比如网上各种教程说的豆瓣、贴吧和糗事百科之类的。有天发现了别人说的爬虫闯关网站：<a href="http://www.heibanke.com/lesson/crawler_ex00/">黑板客爬虫闯关</a>，用来学爬虫应该是非常合适的，由易到难，也包括了以后要用到的模拟登录和多线程等，值得推荐。</p>
-
-<h3 id="section-2">终端版知乎</h3>
-
-<p>  在找爬虫资料的时候看到别人做的终端版的豆瓣FM和Twitter，于是就开了个脑洞想着自己能不能做一个终端版的知乎客户端出来，以后用命令行来刷知乎是不是会感觉更酷一点。</p>
-
-<p>  在Github上搜了一圈也发现了许多爬知乎的项目，找了一两个学习了一下就开始动手写了。</p>
-
-<h4 id="section-3">登录</h4>
-
-<p>  首先面对的问题就是登录，登录过后才能查看属于自己的Time Line，才能给别人点赞、关注问题，在早期开始写的时候登录并不需要验证码，所以一个post把账号密码传到服务器就搞定了，但是我发现一边在爬的时候知乎也一边在增加反爬虫的机制了。比如登录的过程中开始增加验证码了，而且获取验证码的url也改了：http://www.zhihu.com/captcha.gif?r=1468727020613&amp;type=login，参数r表示的是当前时间的时间戳，重点是一定要带上type＝login这个参数，否则取到的验证码是无效的！也不知那天怎么就偷懒没加这个参数，结果试了半天也不对。</p>
-
-<h4 id="cookie">cookie</h4>
-
-<p>  cookie是网站为了辨别用户身份、进行session跟踪而存储在用户本地的数据，也就是说网站用cookie来识别你是谁，在完成了登录之后服务器就会返回cookie.在这接下来的点赞、关注等操作我们的请求都要带上这个cookie才行，否则服务器都不知道你是谁怎么给你增加关注的问题呢？ 所以如果爬知乎请求返回的错误码是403，那基本就是因为你没表明身份了，这个可是我的血汗经验，：）。</p>
-
-<p>  requests也提供了很方便的管理cookie的方式。</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
-</span><span class="line">
-</span><span class="line"><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="s">&quot;email&quot;</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;remember_me&quot;</span><span class="p">:</span> <span class="s">&quot;true&quot;</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;_xsrf&quot;</span><span class="p">:</span> <span class="n">_xsrf</span><span class="p">,</span>
-</span><span class="line">    <span class="s">&quot;captcha&quot;</span><span class="p">:</span> <span class="n">captcha</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&quot;https://www.zhihu.com/login/email&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>  就这么简单cookie就被保存在session中了，接下来所有的请求只要通过session来处理就可以咯。</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="c"># 可以查看cookie有哪些</span>
-</span><span class="line"><span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">cookies</span><span class="p">:</span>
-</span><span class="line">	<span class="k">print</span> <span class="n">cookie</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h4 id="html">获取html源码中的内容</h4>
-
-<p>  有了以上的准备之后向”https://www.zhihu.com”发请求就可以得到首页的TL了(未登录用户的话会被重定向的)，这时候获得的是html页面的源码，我们要做的就是从中解析出相应的内容，这时候就要用上另一个神器<a href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup 4</a>了。它可以将html文本转换成DOM树模型，提供各种各样的选择器来简化获取数据的难度，比起用正则表达式来匹配数据的方式高到不知道哪里去了。但我也还是建议掌握正则表达式的用法，在一些获取简单数据如_xsrf上还是很方便的，而且感觉还是写正则比较帅。</p>
-
-<h4 id="js">解决JS中的请求</h4>
-
-<p>  很多时候数据是通过在JavaScript脚本中触发请求去获取的，就像上文请求到的Time Line只包括了首页的20条动态，而在往后知乎就是通过JS动态请求数据的，显然在终端中是无法触发到那段JS的。</p>
-
-<p>  而要解决这个问题，最核心的在于确定请求数据的API，Chrome的开发者模式就提供来很大便利了。打开console，查看network，就很容易发现请求的url了。</p>
-
-<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/console.png" alt="" /></p>
-
-<p>  很容易发现上图中HomeFeedListV2就是获取下一页Time Line的请求啦，于是就又能愉快的继续下去了，包括后来所有的点赞、关注问题等等也都是这样来处理的。</p>
-
-<p>  PS. console里会发布招聘信息的，好像很多互联网都喜欢这么搞了。</p>
-
-<h4 id="section-4">多线程提升体验</h4>
-
-<p>  如果在刷TL的时候总是等到用户已经看到这一页的时候在去请求就会感觉到明显的卡顿，因为网络请求总是需要耗时的，感觉这样体验就不太好，于是为了提升响应速度我采用了多线程的方式。</p>
-
-<p>  当前一个主线程在监听用户的输入并作相应的处理，然后再开一个线程在后台请求TL的数据，为了良心的爬知乎，不给服务器造成过大的压力我设定了一个阈值：保证有十页的内容给用户看，否则才让线程取数据，并且一秒只发一个请求。这也是在学爬虫的时候看到的建议：我们是在获取数据，而不是在给别人的服务器做压力测试。而只开一个线程是为了保证获取到的数据在时间上是保证连续的，如果有多个线程返回的话就需要额外的开销来维护，所以没有选择这么做。这样一来客户端响应的时间确实快了很多，刷起TL来也更开心了：）。</p>
-
-<h4 id="section-5">效果图</h4>
-
-<p>  一起看看效果吧:</p>
-
-<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/login.png" alt="登录" />
-<img src="http://7xqncq.com1.z0.glb.clouddn.com/TimeLine.png" alt="Time Line" />
-<img src="http://7xqncq.com1.z0.glb.clouddn.com/help.png" alt="help" />
-<img src="http://7xqncq.com1.z0.glb.clouddn.com/zan.png" alt="用命令点赞" />
-<img src="http://7xqncq.com1.z0.glb.clouddn.com/zhihu.png" alt="知乎动态更新" /></p>
-
-<h4 id="todo">TODO</h4>
-
-<p>  现在的功能还比较基本，主要是我一般也就看看不太爱答题或者评论，不过以后应该会接着扩展的，包括导出答案备份、增加评论等等的功能，反正会一直维护下去的吧，因为这算是我目前为止自己最喜欢的一个项目了。</p>
-
-<p>  加油。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[出头天]]></title>
-    <link href="http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian/"/>
-    <updated>2016-01-27T12:23:05+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian</id>
-    <content type="html"><![CDATA[<audio controls=""><source src="http://7xqncq.com1.z0.glb.clouddn.com/%E4%BA%94%E6%9C%88%E5%A4%A9%20-%20%E5%87%BA%E5%A4%B4%E5%A4%A9.mp3" /></audio>
-
-<p><strong>你要一直努力</strong></p>
-
-<p><strong>努力走到出头天的</strong></p>
-
-<p><strong>那一天</strong></p>
-
-<!--more-->
-
-<blockquote>
-  <p>在我的天顶 甘有人会看见 <br />
-看到我不甘愿这样过一生 <br /><br />
-在我的一生 我甘愿来相信 <br />
-每一朵花都有自己的春天 <br />
-在我的天顶 大雨落不停 <br />
-也不能改变到我的固执 耶 <br /><br />
-永远等待那一日 咱可以出头天 <br />
-人生不怕风浪 只怕自己没志气 <br />
-那一日 咱可以出头天 <br />
-我盼望的日子 会真快 来到我身边 <br /><br />
-在我的天顶 甘有人在保佑 <br />
-怎样我常常摔的头壳流血 <br /><br />
-血乾会结痂 失败也不失志 <br />
-成功是咱自己看自己得起 <br />
-飘浪的日子 等待着时机 <br />
-我不信命运会这麽无情 耶 <br /><br />
-永远等待那一日 咱可以出头天 <br />
-人生不怕风浪 只怕自己没志气 <br />
-那一日 咱可以出头天 <br />
-我盼望的日子 会真快 来到我身边</p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-</feed>
+</body>
+</html>
+<script>
+	document.getElementById('zhcard-du-du-76-75-1').style.marginLeft='40px'
+</script>

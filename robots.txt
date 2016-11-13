@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://duduainankai.github.io/sitemap.xml 
+Sitemap: http://duduainankai.github.io/sitemap.xml
+Sitemap: http://duduainankai.github.io/sitemap_baidu.xml
+
+

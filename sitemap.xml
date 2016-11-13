@@ -1,71 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 <url>
-<loc>http://duduainankai.github.io/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/</loc>
-<lastmod>2016-10-23T10:03:05+08:00</lastmod>
+  <loc>http://lizheming.top/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan/</loc>
-<lastmod>2016-08-03T15:27:32+08:00</lastmod>
+  <loc>http://lizheming.top/blog/index.html</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/2016/07/21/zui-jia-sun-you/</loc>
-<lastmod>2016-07-21T12:03:05+08:00</lastmod>
+  <loc>http://lizheming.top/blog/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan/</loc>
-<lastmod>2016-07-17T10:03:05+08:00</lastmod>
+  <loc>http://lizheming.top/blog/categories/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian/</loc>
-<lastmod>2016-01-27T12:23:05+08:00</lastmod>
+  <loc>http://lizheming.top/blog/archives/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/archives/</loc>
+  <loc>http://lizheming.top/blog/comments/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/</loc>
+  <loc>http://lizheming.top/about/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/</loc>
+  <loc>http://lizheming.top/blog/categories/python/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/comments/</loc>
+  <loc>http://lizheming.top/blog/categories/xiang-mu/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/about/</loc>
+  <loc>http://lizheming.top/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/chu-tou-tian/</loc>
+  <loc>http://lizheming.top/blog/pencil/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/xiang-mu/</loc>
+  <loc>http://lizheming.top/blog/categories/java/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/pa-chong/</loc>
+  <loc>http://lizheming.top/blog/2016/08/03/a-li-yun-osschu-ti-yan/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/python/</loc>
+  <loc>http://lizheming.top/blog/categories/gang-le/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/sheng-huo/</loc>
+  <loc>http://lizheming.top/blog/categories/sheng-huo/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/gang-le/</loc>
+  <loc>http://lizheming.top/blog/2016/07/21/zui-jia-sun-you/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/categories/java/</loc>
+  <loc>http://lizheming.top/blog/categories/pa-chong/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/blog/pencil/index.html</loc>
-<lastmod>2016-11-07T11:29:53+08:00</lastmod>
+  <loc>http://lizheming.top/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/googlebbba4c24a0ed14bc.html</loc>
-<lastmod>2016-11-11T21:52:54+08:00</lastmod>
+  <loc>http://lizheming.top/blog/categories/chu-tou-tian/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 <url>
-<loc>http://duduainankai.github.io/index.html</loc>
-<lastmod>2016-11-12T23:17:04+08:00</lastmod>
+  <loc>http://lizheming.top/blog/2016/01/27/chu-tou-tian/</loc>
+  <lastmod>2016-11-12T15:20:37+00:00</lastmod>
 </url>
 </urlset>

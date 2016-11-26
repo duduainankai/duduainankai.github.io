@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类：nginx | 出头天]]></title>
+  <link href="http://duduainankai.github.io/blog/categories/nginx/atom.xml" rel="self"/>
+  <link href="http://duduainankai.github.io/"/>
+  <updated>2016-11-27T00:26:32+08:00</updated>
+  <id>http://duduainankai.github.io/</id>
+  <author>
+    <name><![CDATA[杜杜]]></name>
+    <email><![CDATA[nkdudu@126.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Nginx的反向代理和负载均衡]]></title>
+    <link href="http://duduainankai.github.io/blog/2016/08/10/nginxde-fan-xiang-dai-li-he-fu-zai-jun-heng/"/>
+    <updated>2016-08-10T10:23:32+08:00</updated>
+    <id>http://duduainankai.github.io/blog/2016/08/10/nginxde-fan-xiang-dai-li-he-fu-zai-jun-heng</id>
+    <content type="html"><![CDATA[<p>  上周总结完了OSS的使用，这篇可以换下一话题，总结一下项目里用到的Nginx。同时作为反向代理和负载均衡器的使用与配置。</p>
+
+<p>  Nginx是一个由俄罗斯工程师开发的HTTP服务器，轻量级却很高效，国内也有诸如豆瓣之类越来越多的网站在使用。<!--more--></p>
+
+<p>  在实验室的项目上，我们也采用了使用Nginx作为HTTP服务器并结合Tomcat作为应用服务器的搭配方式。Nginx负责处理前端的http请求而将动态业务逻辑转发给后端的Tomcat进行处理，同时启用了Nginx自带的负载均衡配置以减轻单台Tomcat服务器的压力。</p>
+
+<h3 id="nginx">Nginx的反向代理</h3>
+
+<h4 id="section">什么是反向代理</h4>
+
+<p>  假设有这么一台服务器，它接受来自网络上的连接请求，但本身并不对请求做出处理，而是将这个请求转发给其他服务器处理，当这台服务器收到响应后再将响应返回给发起连接请求的客户端。那么这台服务器就被称作反向代理服务器，它完成的工作就是反向代理。而这一切对于发起连接的客户端完全无法感知，也不会有任何影响。</p>
+
+<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/reverse_proxy.png" alt="" />
+（图片来源于网络）</p>
+
+<p>  既然有反向代理，那么同样也就存在正向代理。正向代理是指当你需要访问某个网站的内容但是却因为一些不可描述的原因404的时候，通过使用一个中间的跳板，代为由这个跳板向目标网站发起请求获取响应，再返回给你。相信这个过程广大中国网民早已熟练掌握，否则又怎么能看长者是怎么谈笑风生的呢。</p>
+
+<h4 id="nginx-1">Nginx反向代理的配置</h4>
+
+<p>  项目部署在Ubuntu环境下，通过apt-get install nginx安装完Nginx后，可以在/etc/nginx目录下看到所有的文件，其中nginx.conf就是需要修改的配置文件。找到nginx.conf下的http配置段的server，按照如下方式修改：</p>
+
+<p>``` python
+server {
+    listen       80;
+    server_name  localhost;</p>
+
+<pre><code>log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                 '$status $body_bytes_sent "$http_referer" '
+                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+# 开启访问日志，需要自定义main格式，并在当前目录新建logs文件夹
+access_log  logs/host.access.log  main; 
+
+# 开启错误日志，格式不支持自定义，第二个参数表示日志等级
+error_log   logs/error.log  warn;
+
+# 设置静态html和js文件的位置
+location / {
+	 root /opt/html;
+	 try_files $uri $uri/ /index.html;
+	 index  index.html index.htm;
+}
+
+# 对/api的请求设置反向代理
+location /api/ {
+    proxy_pass http://127.0.0.1:8080/Test/;
+    proxy_connect_timeout 2;
+} } ```
+</code></pre>
+
+<p>  在按照上面的配置启动Nginx后，所有的静态html文件、js文件请求都会有Nginx来处理，而需要动态填充的数据则会通过配置项中的/api请求反向代理到我们所设置的服务器上并处理。</p>
+
+<h4 id="section-1">反向代理的好处</h4>
+
+<p>  了解完了什么是反向代理和怎么配置，那想想看为什么我们要用反向代理呢？</p>
+
+<p>  1. 保护网站安全。因为所有来自网络上的访问请求必须经过反向代理服务器，这就相当于在后端的应用服务器和可能的网络攻击之间建立了一个屏障。</p>
+
+<p>  2. 静态文件可以直接由Nginx处理。这样可以减轻后端应用服务器的负担。</p>
+
+<p>  3. 实现负载均衡。可以配置后端的应用集群，让反向代理对不同的请求有不同的转发选择，可以降低单台应用服务器的压力，从而提高系统总体处理能力，改善网站高并发情况下的性能。</p>
+
+<h3 id="nginx-2">Nginx的负载均衡</h3>
+
+<h4 id="section-2">什么是负载均衡</h4>
+
+<p>  负载均衡就是对工作任务进行平衡、分摊到多个操作单元上执行，也就是说当Nginx有多个请求需要转发时，它可以选择将这些请求平均的分摊到多个后端的应用服务器上进行处理，这样可以减轻单台应用服务器的压力，也可以提高响应的速度。</p>
+
+<p>  负载均衡可以有多种的实现方式，包括了链路负载均衡和集群负载均衡等。链路负载均衡是在DNS解析这一层实现的，当输入一个域名时，用于解析域名的DNS Server就可以针对不同地区的用户返回不同的ip地址，但这可能存在着服务器挂掉但DNS Server无法感知到而造成用户无法访问的问题。集群负载均衡就是Nginx转发请求到集群上的这种情况，当然也有专门的硬件来实现这里Nginx的功能，叫F5，特点是性能非常好但昂贵，同时不支持动态扩容。</p>
+
+<h4 id="nginx-3">Nginx配置负载均衡</h4>
+
+<p>  其实要实现Nginx的负载均衡很简单，只需要改动一小部分的配置文件。同样还是nginx.cong这个文件，在http中、server模块外再增加一个upstream模块。同时修改需要被代理的请求模块的proxy_pass的内容为upstream的name。</p>
+
+<p>``` python
+# 内容是集群所有机器的ip和端口
+upstream apiserver {
+   server 10.0.0.1:8080;
+   server 10.0.0.2:8080;
+   server 10.0.0.3:8080;
+}</p>
+
+<h1 id="proxypass">修改被代理模块的proxy_pass</h1>
+<p>location /api/ {
+   proxy_pass http://apiserver/Test/;
+   proxy_connect_timeout 2;
+}
+```</p>
+
+<h4 id="nginx-4">Nginx的负载均衡算法</h4>
+
+<p>  我只简单记录下了解过的轮询和ip_hash两种了，网上的资料看是说一共有6种算法。</p>
+
+<p>  1. 轮询：这也是默认的算法。每个请求按时间顺序逐一分配到不同的后端服务器，同时可以在配置时upstream模块时指定每台机器轮询的weight，weight越大分配到的访问几率越高。</p>
+
+<p>  2. ip_hash：顾名思义就是根据请求访问IP的hash结果来分配机器，这样能使得来自同一个ip的用户会固定的访问到同一台后端服务器，这样也就可以继续使用session来记录用户身份了。</p>
+
+<p>  在这个项目中，我们最后采用的方式是轮询，因为没有采用session来记录用户状态，所以ip_hash与轮询实际的效果并没有区别，因此这时采用把请求平均分配的轮询方式而不是把用户平均分配的ip_hash方式会更合理一些。</p>
+
+<h4 id="section-3">总结</h4>
+
+<p>  简单记录了一下Nginx作为反向代理服务器和负载均衡器的使用，但Nginx的内容其实远不止如此。还有比如负载均衡时健康监测，它是如何解决C10K问题以及epoll实现方式与apache采用的select实现方式的比较等等，要学的东西真的还有很多很多啊。</p>
+]]></content>
+  </entry>
+  
+</feed>

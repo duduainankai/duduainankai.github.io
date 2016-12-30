@@ -1,0 +1,289 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta name="baidu-site-verification" content="ZEp3c5fEVj" />
+	
+	<meta charset="utf-8">
+	<title>折腾一下vim - 出头天</title>
+	<meta name="author" content="杜杜">
+
+	
+	<meta name="description" content="折腾一下vim   国庆又开始啦，上海又到了people mountain people sea的景象，更何况懒癌如我肯定是不会出门的。悲剧的是中秋前气胸整了好几天医生叮嘱半年不能运动，这下球也没得踢了。   可是生命在于折腾嘛，既然折腾不了自己就折腾折腾电脑好了。 &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="出头天" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://duduainankai.github.io/blog/2016/10/03/zhe-teng-yi-xiavim/">
+	<link href="/favicon1.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+	<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 百度站长认证 -->
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- 站外链接在新标签页中打开 -->
+<script type="text/javascript">
+ function addBlankTargetForLinks () {
+   $('a[href^="http"]').each(function(){
+       $(this).attr('target', '_blank');
+   });
+ }
+ 
+ $(document).bind('DOMNodeInserted', function(event) {
+  addBlankTargetForLinks();
+ });
+</script>
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<!--
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nkdudu@126.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	-->
+	<img src="/images/profile.jpg" alt="Profile Picture" style="width: 160px;" />
+</div>
+<hgroup>
+  <h1><a href="/">出头天</a></h1>
+  
+    <h2>陪你走到 出头天的那一天</h2>
+  
+</hgroup>
+<nav id="main-nav"><ul class="main">
+	  <li><a href="/">首页</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/blog/categories">标签云</a></li>
+    <li><a href="/blog/archives">文章列表</a></li>
+    <li><a href="/blog/comments">最新评论</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:nkdudu@126.com" title="Email">Email</a>
+		
+		
+		
+		
+		
+			<a class="github" href="https://github.com/duduainankai" title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<!--<a class="linkedin" href="http://www.linkedin.com/in/https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn">LinkedIn</a>-->
+			<a class="linkedin" href="https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn" target="_blank">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+
+	</div>
+</nav>
+</header>				
+			</div>
+			<div class="zhihu-card" data-userhash="du-du-76-75" data-width="200" data-height="300" data-key1="answer" data-key2="agree" data-key3="follower" data-theme="github"></div>
+			<script src="//cdn.jsdelivr.net/zhihu-card/latest/widget.js"></script>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">折腾一下vim</h1>
+	<div class="entry-content" itemprop="articleBody"><p>  国庆又开始啦，上海又到了people mountain people sea的景象，更何况懒癌如我肯定是不会出门的。悲剧的是中秋前气胸整了好几天医生叮嘱半年不能运动，这下球也没得踢了。</p>
+
+<p>  可是生命在于折腾嘛，既然折腾不了自己就折腾折腾电脑好了。于是今天决定把原来一直没好好搞的vim打造一下，毕竟编辑器之神嘛，还是有必要学习一下的。<!--more--></p>
+
+<h3 id="why-vim">Why vim</h3>
+
+<p>  首先，看上去很唬人啊。我一直觉得我作为一个程序员能用命令行的话就尽量不用GUI，能用键盘的就不用鼠标，开着一个黑黑的终端写代码、刷知乎、听豆瓣其实是一件很享受的事情。</p>
+
+<p>  其次，做后端的话难免是要远程ssh到服务器上干活的，不论是改代码还是配环境，所有的编辑操作都只能通过vim来完成。如果不好好学，每次都还要先谷歌出来怎么输入怎么保存退出很浪费时间的。</p>
+
+<p>  再次，好用的ide确实也很多，比如jetbrains家写Java的IntelliJ和Python的Pycharm。但毕竟收费的，老是谷歌破解版的来用心里也其实挺过意不去的，更重要的是要是电脑坏了或者临时需要在另一台没有这些ide的电脑上工作不就GG了。</p>
+
+<p>  最后，我很赞同没有最好的只有最适合的编辑器这种观点。完全不需要在浪费时间争论ide、vim和emacs哪个才是最好的，选择一个最适合的才是最重要的，毕竟写出来的代码才能代表你的水平嘛。就像写Java我也还是会用IntelliJ，也许哪天也会尝试看看emacs咯。</p>
+
+<h3 id="my-vim">My vim</h3>
+
+<p>  首先参考的就是vim as python ide这篇作者的vim配置了，可以在<a href="https://github.com/mbrochh/vim-as-a-python-ide">这里</a>找到，还附有他在PyCon上关于这个配置的演讲视频，不过在油管上需要自备梯子。这一下其实就解决了大半部分的基本配置了。</p>
+
+<p>  然后就是知乎、StackOverflow上一顿搜了。发现了<a href="http://github.com/VundleVim/Vundle.Vim">vundle</a>这样的插件管理神器，再结合GitHub就可以很简单的添加、删除自己需要的任何插件。首先在.vim文件夹下新建一个bundle文件夹，然后克隆vundle到bundle文件夹后，就可以在.vimrc文件中添加启用vundle的配置：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="nb">set</span> <span class="n">rtp</span><span class="o">+=~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">bundle</span><span class="o">/</span><span class="n">vundle</span>
+</span><span class="line"><span class="n">call</span> <span class="n">vundle</span><span class="c">#begin()</span>
+</span><span class="line"><span class="n">Bundle</span> <span class="s">&#39;gmarik/vundle&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="err">$</span><span class="p">{</span><span class="err">添加你需要的</span><span class="n">vim</span><span class="err">插件</span><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="n">call</span> <span class="n">vundle</span><span class="c">#end()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>  使用vundle来管理插件的话，只需要找到这个插件的GitHub仓库地址，比如https://github.com/gmarik/vundle，然后添加一行Bundle ‘gmarik/vundle’到配置文件里，在vim里执行:BundleInstall就完成这个插件的安装啦。像vundle、homebrew和apt-get这样的包管理工具真的是好有用，赞一个。</p>
+
+<p>  然后是我用到的一些插件：nerdtree、vim-nerdtree-tabs、jedi-vim、vim-autocorrect、vim-fugitive、vim-powerline。再搭配一个护眼的solarized之类的皮肤，一切就都完美就绪啦。</p>
+
+<p>  我的配置文件都可以在<a href="https://github.com/duduainankai/duduainankai_vim">这里</a>找到，最后上一张截图，也不枉这一天的折腾啦。</p>
+
+<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/vim.png" alt="" /></p>
+</div>
+	<ul class="pager" style="padding-bottom:10px;">
+        
+            <li style="float: left;">
+                <a href="/blog/2016/08/10/nginxde-fan-xiang-dai-li-he-fu-zai-jun-heng/">« 上一篇: Nginx的反向代理和负载均衡</a>
+            </li>
+        
+        
+            <li style="float: right;">
+                <a href="/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/">» 下一篇: 铅笔画和图片墙</a>
+            </li>
+        
+    </ul>
+
+</article>
+
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2016/10/03/zhe-teng-yi-xiavim" data-title="折腾一下vim" data-url="http://duduainankai.github.io/blog/2016/10/03/zhe-teng-yi-xiavim/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"duduainankai"};
+    (function() {
+
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+  </section>
+</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2016
+
+    杜杜
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d733557f5d61a3e85dc9c1f719fe00a1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<script type="text/javascript" style="display:None">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257417654'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257417654' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<!--
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1257404397'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257404397%26show%3Dpic" 
+		 	style="display:None" type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1257417654'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257417654" 
+			style="display:None" type='text/javascript'%3E%3C/script%3E")));
+</script>
+-->
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+		</div>
+	</div>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
+<script>
+	document.getElementById('zhcard-du-du-76-75-1').style.marginLeft='40px'
+</script>

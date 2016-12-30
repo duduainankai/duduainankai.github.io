@@ -93,7 +93,7 @@ private void generatePolicy(String dir) {
 ``` 
 &emsp;&emsp;前端通过ajax等方式发送请求获取到这个policy，然后构造相应的表单数据发送请求给oss，就可以实现文件的上传了。
 
-```
+``` java
 url: host, // 后台返回的host
 data: { 
     'key' : g_object_name,	// 存储的文件名
@@ -111,7 +111,7 @@ data: {
 
 ![](http://7xqncq.com1.z0.glb.clouddn.com/oss2.png)
 
-```
+``` java
 private final static String endpoint = "你的OSSendpoint";
 private final static String accessId = "你账号的accessId";
 private final static String accessKey = "你账号的accessKey";
@@ -161,7 +161,7 @@ private void generatePolicy(String dir, String callback_param) {
 ```
 &emsp;&emsp;这是callback_param的一个例子：
 
-```
+``` java
 String callback_param="{" + 
     "\"callbackUrl\":" +
     "\""+ callbackurl + "\"," + 
@@ -178,7 +178,7 @@ String callback_param="{" +
 
 &emsp;&emsp;前端构造的上传文件的数据中需要增加回调body和自定义参数的值：
 
-```
+``` java
 url: host,
 data: { 
   'key' : g_object_name,	// 存储的文件名

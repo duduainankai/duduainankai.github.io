@@ -1,0 +1,45 @@
+---
+layout: post
+title: "折腾一下vim"
+date: 2016-10-03 23:27:32 +0800
+comments: true
+categories: vim
+---
+
+&emsp;&emsp;国庆又开始啦，上海又到了people mountain people sea的景象，更何况懒癌如我肯定是不会出门的。悲剧的是中秋前气胸整了好几天医生叮嘱半年不能运动，这下球也没得踢了。
+
+&emsp;&emsp;可是生命在于折腾嘛，既然折腾不了自己就折腾折腾电脑好了。于是今天决定把原来一直没好好搞的vim打造一下，毕竟编辑器之神嘛，还是有必要学习一下的。<!--more-->
+
+###Why vim
+
+&emsp;&emsp;首先，看上去很唬人啊。我一直觉得我作为一个程序员能用命令行的话就尽量不用GUI，能用键盘的就不用鼠标，开着一个黑黑的终端写代码、刷知乎、听豆瓣其实是一件很享受的事情。
+
+&emsp;&emsp;其次，做后端的话难免是要远程ssh到服务器上干活的，不论是改代码还是配环境，所有的编辑操作都只能通过vim来完成。如果不好好学，每次都还要先谷歌出来怎么输入怎么保存退出很浪费时间的。
+
+&emsp;&emsp;再次，好用的ide确实也很多，比如jetbrains家写Java的IntelliJ和Python的Pycharm。但毕竟收费的，老是谷歌破解版的来用心里也其实挺过意不去的，更重要的是要是电脑坏了或者临时需要在另一台没有这些ide的电脑上工作不就GG了。
+
+&emsp;&emsp;最后，我很赞同没有最好的只有最适合的编辑器这种观点。完全不需要在浪费时间争论ide、vim和emacs哪个才是最好的，选择一个最适合的才是最重要的，毕竟写出来的代码才能代表你的水平嘛。就像写Java我也还是会用IntelliJ，也许哪天也会尝试看看emacs咯。
+
+###My vim
+
+&emsp;&emsp;首先参考的就是vim as python ide这篇作者的vim配置了，可以在[这里](https://github.com/mbrochh/vim-as-a-python-ide)找到，还附有他在PyCon上关于这个配置的演讲视频，不过在油管上需要自备梯子。这一下其实就解决了大半部分的基本配置了。
+
+&emsp;&emsp;然后就是知乎、StackOverflow上一顿搜了。发现了[vundle](http://github.com/VundleVim/Vundle.Vim)这样的插件管理神器，再结合GitHub就可以很简单的添加、删除自己需要的任何插件。首先在.vim文件夹下新建一个bundle文件夹，然后克隆vundle到bundle文件夹后，就可以在.vimrc文件中添加启用vundle的配置：
+
+``` python
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+Bundle 'gmarik/vundle'
+
+${添加你需要的vim插件}
+
+call vundle#end()
+```
+
+&emsp;&emsp;使用vundle来管理插件的话，只需要找到这个插件的GitHub仓库地址，比如https://github.com/gmarik/vundle，然后添加一行Bundle 'gmarik/vundle'到配置文件里，在vim里执行:BundleInstall就完成这个插件的安装啦。像vundle、homebrew和apt-get这样的包管理工具真的是好有用，赞一个。
+
+&emsp;&emsp;然后是我用到的一些插件：nerdtree、vim-nerdtree-tabs、jedi-vim、vim-autocorrect、vim-fugitive、vim-powerline。再搭配一个护眼的solarized之类的皮肤，一切就都完美就绪啦。
+
+&emsp;&emsp;我的配置文件都可以在[这里](https://github.com/duduainankai/duduainankai_vim)找到，最后上一张截图，也不枉这一天的折腾啦。
+
+![](http://7xqncq.com1.z0.glb.clouddn.com/vim.png)

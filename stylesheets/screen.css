@@ -7,7 +7,7 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
  .container .left-col {
-	 background:url("/images/left-bg1.jpg") no-repeat;
+	 <!--background:url("/images/left-bg1.jpg") no-repeat;-->`
 	 -webkit-background-size: auto auto;
 	 background-size: auto auto;
      -webkit-transform: translateZ(0);

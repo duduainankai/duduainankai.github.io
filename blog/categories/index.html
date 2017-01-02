@@ -86,7 +86,7 @@ vim (1)
 	<div class="container">
 		<div class="left-col">
 			<div class="intrude-less">
-			<header id="header" class="inner"><div class="profilepic">
+				<header id="header" class="inner"><div class="profilepic">
 	<!--
 	
 	<script src="/javascripts/md5.js"></script>
@@ -145,8 +145,10 @@ vim (1)
 
 	</div>
 </nav>
-</header>				
+</header>
 			</div>
+
+			<!-- zhihu card的代码-->
 			<div class="zhihu-card" data-userhash="du-du-76-75" data-width="200" data-height="300" data-key1="answer" data-key2="agree" data-key3="follower" data-theme="github"></div>
 			<script src="//cdn.jsdelivr.net/zhihu-card/latest/widget.js"></script>
 		</div>	
@@ -204,7 +206,29 @@ vim (1)
 
 
 </div>
+				
+				<!-- 给所有页面都增加多说评论框 -->
+				<section id="comments">
+				   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="" data-title="标签" data-url="http://duduainankai.github.io/blog/categories/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"duduainankai"};
+    (function() {
+
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+				</section>
 			</div>
+		
 			<footer id="footer" class="inner">Copyright &copy; 2017
 
     杜杜

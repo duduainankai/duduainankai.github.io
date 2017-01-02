@@ -13,7 +13,7 @@ A programmer, on the way to be good.
 
 I usually program with Java and I like Python.
 
-Eager for 2017 summer intern and 2018 campus recruitment, [resume](http://localhost:4000/resume/lizheming_cv_en.pdf).
+Eager for 2017 summer intern and 2018 campus recruitment, [resume](http://lizheming.top/resume/lizheming_cv_en.pdf).
 
 Come On You Gunners!
 

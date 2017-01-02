@@ -7,17 +7,17 @@ sharing: false
 footer: false
 ---
 
-Hello World.
+My name is Zheming Li, got bachelor @NKU, trying to get master @SJTU.
 
-### Contact me:
+A programmer, on the way to be good.
 
-* Weixin： lv381853802
-* Email: <nkdudu@126.com>
-* Blog: <http://lizheming.top>
-* GitHub: <https://github.com/duduainankai>
-* zhihu: 杜杜<https://www.zhihu.com/people/du-du-76-75>
+I usually program with Java and I like Python.
 
-<br />
+Eager for 2017 summer intern and 2018 campus recruitment, [resume](http://localhost:4000/resume/lizheming_cv_en.pdf).
+
+Come On You Gunners!
+
+<br/>
 
 ----------
 <br />
@@ -27,9 +27,13 @@ Hello World.
 <br />
 我是黎哲明，南开本科，交大硕士在读。
 
-会写一点代码，但是很菜，希望能变的很厉害。
+会写一点代码，希望能变的很厉害。
 
-阿森纳球迷，喜欢足球篮球台球，嗯 还有编程。
+工作写Java，喜欢写Python。
+
+求2017暑期实习，2018校招，[简历](http://lizheming.top/resume/lizheming_cv_ch.pdf)。
+
+阿森纳球迷，喜欢足球篮球台球扫雷魔方编程。
 
 既然来了，交个朋友吧。
 
@@ -38,12 +42,4 @@ Hello World.
 Come On You Gunners!
 
 <br />
-
-### 联系方式
-
-* 微信： lv381853802
-* 邮件: <nkdudu@126.com>
-* 博客: <http://lizheming.top>
-* GitHub: <https://github.com/duduainankai>
-* 知乎: <https://www.zhihu.com/people/du-du-76-75>
 

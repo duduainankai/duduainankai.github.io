@@ -1,0 +1,344 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta name="baidu-site-verification" content="ZEp3c5fEVj" />
+	
+	<meta charset="utf-8">
+	<title>阿里巴巴Java开发手册 - 出头天</title>
+	<meta name="author" content="杜杜">
+
+	
+	<meta name="description" content="阿里巴巴Java开发手册   年不知不觉就过完了，马上又要开学了，不是很开心。快乐的时间总是特别短暂，前天晚上还在家里的街上开着车和同学鬼哭狼嚎其实不想走其实我想留(是真的不想走)，然后今天就已经到学校了。   一个假期干的事情也不多，在家陪陪妈妈打打麻将和同学每天吃吃喝喝就已经去掉一大半时间了 &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="出头天" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://duduainankai.github.io/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce/">
+	<link href="/favicon1.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+	<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 百度站长认证 -->
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- 站外链接在新标签页中打开 -->
+<script type="text/javascript">
+ function addBlankTargetForLinks () {
+   $('a[href^="http"]').each(function(){
+       $(this).attr('target', '_blank');
+   });
+ }
+ 
+ $(document).bind('DOMNodeInserted', function(event) {
+  addBlankTargetForLinks();
+ });
+</script>
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner"><div class="profilepic">
+	<!--
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nkdudu@126.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	-->
+	<img src="/images/profile.jpg" alt="Profile Picture" style="width: 160px;" />
+</div>
+<hgroup>
+  <h1><a href="/">出头天</a></h1>
+  
+    <h2>陪你走到 出头天的那一天</h2>
+  
+</hgroup>
+<nav id="main-nav"><ul class="main">
+	  <li><a href="/">首页</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/blog/categories">标签云</a></li>
+    <li><a href="/blog/archives">文章列表</a></li>
+    <li><a href="/blog/comments">最新评论</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:nkdudu@126.com" title="Email">Email</a>
+		
+		
+		
+		
+		
+			<a class="github" href="https://github.com/duduainankai" title="GitHub">GitHub</a>
+		
+		
+		
+		
+			<!--<a class="linkedin" href="http://www.linkedin.com/in/https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn">LinkedIn</a>-->
+			<a class="linkedin" href="https://www.linkedin.com/in/zheming-li-1a8282aa" title="LinkedIn" target="_blank">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+
+	</div>
+</nav>
+</header>
+			</div>
+
+			<!-- zhihu card的代码-->
+			<div class="zhihu-card" data-userhash="du-du-76-75" data-width="200" data-height="300" data-key1="answer" data-key2="agree" data-key3="follower" data-theme="github"></div>
+			<script src="//cdn.jsdelivr.net/zhihu-card/latest/widget.js"></script>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><!--post编译时导入的样式，如果去掉下面的display为none同时在default里也启用了多说就会出现两个-->
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">阿里巴巴Java开发手册</h1>
+	<div class="entry-content" itemprop="articleBody"><p>  年不知不觉就过完了，马上又要开学了，不是很开心。快乐的时间总是特别短暂，前天晚上还在家里的街上开着车和同学鬼哭狼嚎其实不想走其实我想留(是真的不想走)，然后今天就已经到学校了。</p>
+
+<p>  一个假期干的事情也不多，在家陪陪妈妈打打麻将和同学每天吃吃喝喝就已经去掉一大半时间了，正事干的也不多。前两天刷知乎的时候看到大家在讨论阿里出的一个Java开发手册，评论还不错于是找来看了看，收获不小也有很多切身体会，写篇博客小小的记录一下吧。<!--more--></p>
+
+<blockquote>
+  <p>【强制】 代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。 说明:正确的英文拼写和语法可以让阅读者易于理解,避免歧义。注意,即使纯拼音命名方式 也要避免采用。 <br />
+【强制】类名使用 UpperCamelCase 风格,必须遵从驼峰形式,但以下情形例外:(领域模型 的相关命名)DO / BO / DTO / VO等。<br />
+【强制】方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase 风格,必须遵从 驼峰形式。<br />
+【强制】常量命名全部大写,单词间用下划线隔开,力求语义表达完整清楚,不要嫌名字长。</p>
+</blockquote>
+
+<p>  用拼音命名感觉会很别扭，但是我在做OJ的时候也确实这么干过。。还好做项目的时候没有试过，相似的是在上个学期碰见过用中文做数据库表名的，让我看的一阵蛋疼。至于驼峰命名法也是感觉还是挺常见的习惯，也一直在用，顺便提供一个<a href="http://unbug.github.io/codelf/#%E9%A2%84%E5%AE%9A">变量命名神器</a>。</p>
+
+<blockquote>
+  <p>【强制】POJO 类中布尔类型的变量,都不要加 is,否则部分框架解析会引起序列化错误。 反例:定义为基本数据类型boolean isSuccess;的属性,它的方法也是isSuccess(),RPC 框架在反向解析的时候,“以为”对应的属性名称是 success,导致属性获取不到,进而抛出异常。</p>
+</blockquote>
+
+<p>  好像是阿里内部有踩过这样的坑，虽然还没有碰到过但还是记下来比较好。</p>
+
+<blockquote>
+  <p>【推荐】接口类中的方法和属性不要加任何修饰符号(public 也不要加),保持代码的简洁性,并加上有效的Javadoc注释。尽量不要在接口里定义变量,如果一定要定义变量,肯定是与接口方法相关,并且是整个应用的基础常量。</p>
+</blockquote>
+
+<p>  这条还是第一次看见，知乎上R大的解释是：Java的interface声明的成员方法，默认就是public abstract的，所以这两个修饰符别出来就是最简洁明了的写法；而interface里声明的变量默认就是public static final的——只能声明共有常量，所以这些修饰符也是不要写出来最简单明了。</p>
+
+<blockquote>
+  <p>【强制】if/for/while/switch/do 等保留字与左右括号之间都必须加空格。<br />
+【强制】任何运算符左右必须加一个空格。<br />
+【强制】缩进采用4个空格,禁止使用tab字符。</p>
+</blockquote>
+
+<p>  前两条也是用了很久都产生强迫症了，看别人的代码不加都会难受。有种说法叫真的程序员都是四个空格从不用tab，但是我经常偷懒按tab，在python上翻过好几次车。</p>
+
+<blockquote>
+  <p>【强制】关于基本数据类型与包装数据类型的使用标准如下:<br />
+1) 所有的 POJO 类属性必须使用包装数据类型。<br />
+2) RPC方法的返回值和参数必须使用包装数据类型。<br />
+3) 所有的局部变量【推荐】使用基本数据类型。</p>
+</blockquote>
+
+<p>  NPE应该是Java中最常见的异常了，特别是在Java提供了自动拆箱的功能以后，这样的bug有时候很难发现，也是原先没有注意到的一点。</p>
+
+<blockquote>
+  <p>【推荐】使用索引访问用 String 的 split 方法得到的数组时,需做最后一个分隔符后有无
+内容的检查,否则会有抛 IndexOutOfBoundsException 的风险。
+说明:<br />
+String str = “a,b,c,,”;<br />
+String[] ary = str.split(“,”); //预期大于 3,结果是 3 <br />System.out.println(ary.length);<br /></p>
+</blockquote>
+
+<p>  这一条也是很有意思，split函数看上去很方便但其实坑不少。首先它接收的参数是一个string，但会首先判断这个string是不是一个正则表达式，也就是说如果这个string包含了.?等等的字符的话并不能按照预期的通过.来分割原来的字符串，而要将这个.进行转义，也就是参数应该是\.。其次对于分割完成的结果，函数会从后往前遍历，如果得到的是个空串，那么这个空串会被舍弃掉直到遇到第一个不是空串的位置停止，最后返回的结果是从起始位置到倒数第一个非空串为止，也就是上面的例子最后输出的数组长度是3而不是4的原因了。</p>
+
+<blockquote>
+  <p>【强制】不要在foreach循环里进行元素的remove/add操作。remove元素请使用Iterator方式,如果并发操作,需要对Iterator对象加锁。</p>
+</blockquote>
+
+<p>  这是Java的fast fail机制：当多个线程对同一个集合的内容进行操作的时候，某一个线程通过iterator去遍历集合的过程中发现集合的内容被其他线程修改了，就会抛出ConcurrentModificationException异常，产生fast fail事件。这是因为在迭代器在调用next()和remove()方法时都会执行checkForComodification()方法，如果modCount不等于expectedModCount就会抛出异常，而只有当迭代器迭代过程中集合进行了会影响个数的操作之后才有可能发生这种情况。而为了达到多个线程对同一个集合进行修改的目的，应该采用concurrent包下的并发集合类，比如CopyOnWriteArrayList，此时所有的修改会通过在原来的数组的拷贝上进行来避免冲突。</p>
+
+<blockquote>
+  <p>【强制】线程资源必须通过线程池􏰁供,不允许在应用中自行显式创建线程。<br />
+【强制】线程池不允许使用 Executors 去创建,而是通过 ThreadPoolExecutor 的方式,这样 的处理方式让写的同学更加明确线程池的运行规则,规避资源耗尽的风险。<br />
+说明:Executors 返回的线程池对象的弊端如下:<br />
+1) FixedThreadPool 和 SingleThreadPool:<br />
+允许的请求队列长度为 Integer.MAX_VALUE,可能会堆积大量的请求,从而导致 OOM。<br />
+2) CachedThreadPool 和 ScheduledThreadPool:<br />
+允许的创建线程数量为 Integer.MAX_VALUE,可能会创建大量的线程,从而导致 OOM。<br /></p>
+</blockquote>
+
+<p>  对于第一点还是很容易理解的，因为频繁的创建销毁线程会带来额外的系统资源的开销。第二点也是原先没有太注意的地方，学习了。</p>
+
+<h4 id="section">总结</h4>
+
+<p>  看完收获还是很多的，也小小弥补了一下假期太放松带来的罪恶感。不过这个上面刚说到运算符前后要留空格到下面其他总结中自己举得代码例子就没遵守是什么鬼。</p>
+
+<p>  想来很多都是阿里人自己踩过坑得到的经验，很多我还没有经历过的可能感觉不那么重要，比如会用FixedThreadPool会有OOM的可能这件事，做个小项目的话很哪有这种经历的吧。不过写代码大概就是这样一件有趣的事，自己踩过的坑吃过的苦才会记忆的更加深刻吧。</p>
+
+<p>  马上也快找工作了，希望也能有机会加入阿里这样的大公司踩一踩坑吧。加油。</p>
+</div>
+	<ul class="pager" style="padding-bottom:10px;">
+        
+            <li style="float: left;">
+                <a href="/blog/2017/01/01/nian-shao-duo-hao-:wo-de-2016/">« 上一篇: 年少多好：我的2016</a>
+            </li>
+        
+        
+    </ul>
+
+</article>
+
+  <section id="comments" style="display: none">
+   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce" data-title="阿里巴巴Java开发手册" data-url="http://duduainankai.github.io/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"duduainankai"};
+    (function() {
+
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+  </section>
+</div>
+				
+				<!-- 给所有页面都增加多说评论框 -->
+				<section id="comments">
+				   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce" data-title="阿里巴巴Java开发手册" data-url="http://duduainankai.github.io/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"duduainankai"};
+    (function() {
+
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+				</section>
+			</div>
+		
+			<footer id="footer" class="inner">Copyright &copy; 2017
+
+    杜杜
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d733557f5d61a3e85dc9c1f719fe00a1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<script type="text/javascript" style="display:None">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257417654'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257417654' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<!--
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1257404397'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257404397%26show%3Dpic" 
+		 	style="display:None" type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1257417654'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257417654" 
+			style="display:None" type='text/javascript'%3E%3C/script%3E")));
+</script>
+-->
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+		</div>
+	</div>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
+<script>
+	document.getElementById('zhcard-du-du-76-75-1').style.marginLeft='40px'
+</script>

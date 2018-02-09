@@ -18,11 +18,6 @@
 			{% endunless %}
 			<div class="mid-col-container">
 				<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
-				
-				<!-- 给所有页面都增加多说评论框 -->
-				<section id="comments">
-				   {% include post/duoshuo.html %}
-				</section>
 			</div>
 		
 			<footer id="footer" class="inner">{% include footer.html %}</footer>

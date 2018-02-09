@@ -1,129 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>http://lizheming.top/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>1.00</priority>
+<loc>http://duduainankai.github.io/blog/2017/02/13/a-li-ba-ba-Javakai-fa-shou-ce/</loc>
+<lastmod>2017-02-13T20:03:05+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/index.html</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
+<loc>http://duduainankai.github.io/blog/2017/01/01/nian-shao-duo-hao-:wo-de-2016/</loc>
+<lastmod>2017-01-01T16:04:20+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/</loc>
+<lastmod>2016-10-23T10:03:05+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/10/03/zhe-teng-yi-xiavim/</loc>
+<lastmod>2016-10-03T23:27:32+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/archives/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/08/10/nginxde-fan-xiang-dai-li-he-fu-zai-jun-heng/</loc>
+<lastmod>2016-08-10T10:23:32+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/comments/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/08/03/a-li-yun-osschu-ti-yan/</loc>
+<lastmod>2016-08-03T15:27:32+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/about/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/07/21/zui-jia-sun-you/</loc>
+<lastmod>2016-07-21T12:03:05+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/python/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan/</loc>
+<lastmod>2016-07-17T10:03:05+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/xiang-mu/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/2016/01/27/chu-tou-tian/</loc>
+<lastmod>2016-01-27T12:23:05+08:00</lastmod>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/archives/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/pencil/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/java/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/2016/08/03/a-li-yun-osschu-ti-yan/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/comments/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/gang-le/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/about/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/sheng-huo/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/chu-tou-tian/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/2016/07/21/zui-jia-sun-you/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/xiang-mu/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/pa-chong/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/pa-chong/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/2016/07/17/zhong-duan-ban-zhi-hu-ke-hu-duan/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/python/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/categories/chu-tou-tian/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/sheng-huo/</loc>
 </url>
 <url>
-  <loc>http://lizheming.top/blog/2016/01/27/chu-tou-tian/</loc>
-  <lastmod>2016-11-13T13:24:41+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+<loc>http://duduainankai.github.io/blog/categories/gang-le/</loc>
+</url>
+<url>
+<loc>http://duduainankai.github.io/blog/categories/java/</loc>
+</url>
+<url>
+<loc>http://duduainankai.github.io/blog/categories/nginx/</loc>
+</url>
+<url>
+<loc>http://duduainankai.github.io/blog/categories/vim/</loc>
+</url>
+<url>
+<loc>http://duduainankai.github.io/blog/pencil/index.html</loc>
+<lastmod>2016-11-07T11:29:53+08:00</lastmod>
+</url>
+<url>
+<loc>http://duduainankai.github.io/index.html</loc>
+<lastmod>2016-11-25T23:33:58+08:00</lastmod>
 </url>
 </urlset>

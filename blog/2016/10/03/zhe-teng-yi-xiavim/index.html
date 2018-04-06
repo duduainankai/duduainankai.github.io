@@ -11,7 +11,7 @@
 	<meta name="author" content="杜杜">
 
 	
-	<meta name="description" content=" 为正常使用来必力评论功能请激活JavaScript ">
+	<meta name="description" content="折腾一下vim   国庆又开始啦，上海又到了people mountain people sea的景象，更何况懒癌如我肯定是不会出门的。悲剧的是中秋前气胸整了好几天医生叮嘱半年不能运动，这下球也没得踢了。   可是生命在于折腾嘛，既然折腾不了自己就折腾折腾电脑好了。 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -151,7 +151,69 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner"><!-- 来必力City版安装代码 -->
+				<div id="content" class="inner"><!--post编译时导入的样式，如果去掉下面的display为none同时在default里也启用了多说就会出现两个-->
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">折腾一下vim</h1>
+	<div class="entry-content" itemprop="articleBody"><p>  国庆又开始啦，上海又到了people mountain people sea的景象，更何况懒癌如我肯定是不会出门的。悲剧的是中秋前气胸整了好几天医生叮嘱半年不能运动，这下球也没得踢了。</p>
+
+<p>  可是生命在于折腾嘛，既然折腾不了自己就折腾折腾电脑好了。于是今天决定把原来一直没好好搞的vim打造一下，毕竟编辑器之神嘛，还是有必要学习一下的。<!--more--></p>
+
+<h3 id="why-vim">Why vim</h3>
+
+<p>  首先，看上去很唬人啊。我一直觉得我作为一个程序员能用命令行的话就尽量不用GUI，能用键盘的就不用鼠标，开着一个黑黑的终端写代码、刷知乎、听豆瓣其实是一件很享受的事情。</p>
+
+<p>  其次，做后端的话难免是要远程ssh到服务器上干活的，不论是改代码还是配环境，所有的编辑操作都只能通过vim来完成。如果不好好学，每次都还要先谷歌出来怎么输入怎么保存退出很浪费时间的。</p>
+
+<p>  再次，好用的ide确实也很多，比如jetbrains家写Java的IntelliJ和Python的Pycharm。但毕竟收费的，老是谷歌破解版的来用心里也其实挺过意不去的，更重要的是要是电脑坏了或者临时需要在另一台没有这些ide的电脑上工作不就GG了。</p>
+
+<p>  最后，我很赞同没有最好的只有最适合的编辑器这种观点。完全不需要在浪费时间争论ide、vim和emacs哪个才是最好的，选择一个最适合的才是最重要的，毕竟写出来的代码才能代表你的水平嘛。就像写Java我也还是会用IntelliJ，也许哪天也会尝试看看emacs咯。</p>
+
+<h3 id="my-vim">My vim</h3>
+
+<p>  首先参考的就是vim as python ide这篇作者的vim配置了，可以在<a href="https://github.com/mbrochh/vim-as-a-python-ide">这里</a>找到，还附有他在PyCon上关于这个配置的演讲视频，不过在油管上需要自备梯子。这一下其实就解决了大半部分的基本配置了。</p>
+
+<p>  然后就是知乎、StackOverflow上一顿搜了。发现了<a href="http://github.com/VundleVim/Vundle.Vim">vundle</a>这样的插件管理神器，再结合GitHub就可以很简单的添加、删除自己需要的任何插件。首先在.vim文件夹下新建一个bundle文件夹，然后克隆vundle到bundle文件夹后，就可以在.vimrc文件中添加启用vundle的配置：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="nb">set</span> <span class="n">rtp</span><span class="o">+=~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">bundle</span><span class="o">/</span><span class="n">vundle</span>
+</span><span class="line"><span class="n">call</span> <span class="n">vundle</span><span class="c">#begin()</span>
+</span><span class="line"><span class="n">Bundle</span> <span class="s">&#39;gmarik/vundle&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="err">$</span><span class="p">{</span><span class="err">添加你需要的</span><span class="n">vim</span><span class="err">插件</span><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="n">call</span> <span class="n">vundle</span><span class="c">#end()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>  使用vundle来管理插件的话，只需要找到这个插件的GitHub仓库地址，比如https://github.com/gmarik/vundle，然后添加一行Bundle ‘gmarik/vundle’到配置文件里，在vim里执行:BundleInstall就完成这个插件的安装啦。像vundle、homebrew和apt-get这样的包管理工具真的是好有用，赞一个。</p>
+
+<p>  然后是我用到的一些插件：nerdtree、vim-nerdtree-tabs、jedi-vim、vim-autocorrect、vim-fugitive、vim-powerline。再搭配一个护眼的solarized之类的皮肤，一切就都完美就绪啦。</p>
+
+<p>  我的配置文件都可以在<a href="https://github.com/duduainankai/duduainankai_vim">这里</a>找到，最后上一张截图，也不枉这一天的折腾啦。</p>
+
+<p><img src="http://7xqncq.com1.z0.glb.clouddn.com/vim.png" alt="" /></p>
+</div>
+	<ul class="pager" style="padding-bottom:10px;">
+        
+            <li style="float: left;">
+                <a href="/blog/2016/08/10/nginxde-fan-xiang-dai-li-he-fu-zai-jun-heng/">« 上一篇: Nginx的反向代理和负载均衡</a>
+            </li>
+        
+        
+            <li style="float: right;">
+                <a href="/blog/2016/10/23/qian-bi-hua-he-tu-pian-qiang/">» 下一篇: 铅笔画和图片墙</a>
+            </li>
+        
+    </ul>
+
+</article>
+
+<!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDAzOC8xMDU3Ng==">
 <script type="text/javascript">
    (function(d, s) {

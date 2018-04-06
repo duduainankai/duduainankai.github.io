@@ -3,14 +3,6 @@ layout: default
 single: true
 ---
 
-<!--post编译时导入的样式，如果去掉下面的display为none同时在default里也启用了多说就会出现两个-->
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">{% include article.html %}</article>
-{% if page.comments == true %}
-  <section id="comments" style="display: none">
-   {% include post/duoshuo.html %}
-  </section>
-{% endif %}
-
 <!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDAzOC8xMDU3Ng==">
 <script type="text/javascript">

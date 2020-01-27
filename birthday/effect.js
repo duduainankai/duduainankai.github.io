@@ -32,7 +32,8 @@ $('document').ready(function(){
 	$('#play').click(function(){
 		var audio = $('.song')[0];
         audio.play();
-        var musics = ['letter.mp3', 'ok.mp3'];
+        /*
+        var musics = ['letter.mp3', 'shirley.mp3'];
         var index = 0;
         audio.addEventListener('ended',function(){
 	        audio.src = musics[index++];
@@ -40,6 +41,7 @@ $('document').ready(function(){
 	        audio.load();
 	        audio.play();
 	    });
+		*/
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
@@ -192,6 +194,7 @@ $('document').ready(function(){
 		var i;
 
 		function msgLoop (i) {
+			console.log("i: " + i)
 			$("p:nth-child("+i+")").fadeOut('slow').delay(3000).promise().done(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(3000);

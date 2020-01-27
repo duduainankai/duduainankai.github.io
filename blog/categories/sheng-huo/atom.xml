@@ -4,7 +4,7 @@
   <title><![CDATA[分类：生活 | 出头天]]></title>
   <link href="http://duduainankai.github.io/blog/categories/sheng-huo/atom.xml" rel="self"/>
   <link href="http://duduainankai.github.io/"/>
-  <updated>2020-01-25T19:23:05+08:00</updated>
+  <updated>2020-01-27T13:15:10+08:00</updated>
   <id>http://duduainankai.github.io/</id>
   <author>
     <name><![CDATA[杜杜]]></name>
@@ -12,21 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[面试总结之校招篇]]></title>
-    <link href="http://duduainankai.github.io/blog/2018/02/16/mian-shi-zong-jie-zhi-xiao-zhao-pian/"/>
-    <updated>2018-02-16T21:09:24+08:00</updated>
-    <id>http://duduainankai.github.io/blog/2018/02/16/mian-shi-zong-jie-zhi-xiao-zhao-pian</id>
-    <content type="html"><![CDATA[<p>  前文总结完了找实习时候的各种状况，这篇就写写后来九月校招时候的故事吧。依旧按照一面的时间升序排序。</p>
-
-<p>  最后统一感谢一下这么长时间以来给过我各种帮助的各位。<!--more--></p>
-
-<h3 id="wap">WAP</h3>
-
-<p>  WAP全称works application，中文名万革史，一家做ERP的日企。会投这家企业最主要的原因在于——硕士毕不了业也能去。。而且开始的特别早，一年有好几波的招聘。应该是五月份的时候来学校开了一个宣讲会，然后当场扫个二维码留个邮箱，后续就会有笔试的链接发过来了。笔试在牛客上做，一共两道题可以做三个小时。记得题挺难的，两道题都是暴力写了一下过的case并不是很多，不过懒得想了也就交了，想着给面就面，不给拉倒。然后还是收到了面试通知，不过需要先有一轮电面，就选了个周日下午的时间。WAP的面试跟外企比较像，一般是白板编程的套路，不过要求面试是全英文的。这个对于我这种一年也讲不了几句英文的我来说就比较蛋疼了，连自我介绍都还得准备一份英文的，不过为了防止确实毕不了业的情况出现也就只能硬着头皮上了。等到真的面试的时候不出所料的自我介绍完之后问项目的时候就是一顿尬聊，两个中国人怼英文也是很烦，而且那天要去宿舍楼的会议室里面网还很差，一共做了三题，不过都不难，而且很常规，基本都是秒掉了。一个礼拜以内收到了onsite的通知，这边值得称赞一下的是面试的时间会给几个interval让你可以选，还有周末真是最合我意了，选了个周六下午四点的时间就去了。在以前的宣传中WAP的说法都是会先有编程面试，然后会有一个为期一个礼拜的所谓实习，去做一个从需求到设计最后编码的项目；但从一个学长的口中也听说如果算法面试表现的好的话是有机会直接拿offer的。面之前我也没想那么多，真要实习的话就想到时候再想办法吧。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[面试总结之实习篇]]></title>
